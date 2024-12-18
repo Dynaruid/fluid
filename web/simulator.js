@@ -457,7 +457,7 @@ var Simulator = (function () {
     //(1) 파티클 → 그리드 속도 전이 (Particle-to-Grid Transfer)
 
     // 현재 파티클들이 가지고 있는 속도를 그리드에 반영합니다.
-    // 파티클 속도를 이용해 격자(MAC grid) 각각의 셀에 속도를 "스플랫"하는 방식으로 누적합니다.
+    // 파티클 속도를 이용해 격자(MAC grid) 각각의 셀에 속도를 "스플랫splatted"하는 방식으로 누적합니다.
     // 첫 번째 패스: 그리드의 각 셀에 파티클 영향을 가중치(weight)로 누적합니다 (weightTexture).
     // 두 번째 패스: 파티클 속도를 가중치와 함께 누적(velocity * weight)합니다 (tempVelocityTexture).
     // 이후 weightTexture로 tempVelocityTexture를 나눠 최종 velocityTexture를 얻습니다. 즉, velocityTexture = (∑(v_i * w_i)) / (∑w_i) 형태로 평균화합니다.
