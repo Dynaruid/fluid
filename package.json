@@ -1,5 +1,5 @@
 {
-  "name": "flutter_server",
+  "name": "fluid_server",
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
