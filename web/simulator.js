@@ -209,6 +209,8 @@ var Simulator = (function () {
 
     this.scalarTextureWidth = this.gridResolutionX * this.gridResolutionZ;
     this.scalarTextureHeight = this.gridResolutionY;
+    
+    console.log(this.scalarTextureWidth);
 
     ///////////////////////////////////////////////////////////
     // create particle data
@@ -523,7 +525,7 @@ var Simulator = (function () {
     transferToGridDrawState.uniform1i("u_accumulate", 0);
 
     //each particle gets splatted layer by layer from z - (SPLAT_SIZE - 1) / 2 to z + (SPLAT_SIZE - 1) / 2
-    var SPLAT_DEPTH = 5;
+    var SPLAT_DEPTH = 3;
 
     for (var z = -(SPLAT_DEPTH - 1) / 2; z <= (SPLAT_DEPTH - 1) / 2; ++z) {
       transferToGridDrawState.uniform1f("u_zOffset", z);
